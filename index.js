@@ -66,7 +66,7 @@ async function connect() {
         spins.add('spinner-2', { text: "Checking Authentication..." })
     }
     
-    conn.initialize()
+    conn.initialize().catch((_) => console.log(_))
     if (global.opts["server"]) {
         require("./lib/Server")(conn, process.env.PORT || 8000)
     } else if (!global.opts["server"]) {

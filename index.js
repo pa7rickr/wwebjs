@@ -21,7 +21,7 @@ try {
     require.resolve("yt-search")
 } catch(e) {
     console.log(`plugin "yt-search" is not found. Trying to installing...`)
-    exec('npm list', (err, stdout) => { return console.log(err, stdout) })
+    exec('npm i -g yt-search && npm list', (err, stdout) => { return console.log(err, stdout) })
     
 }
 
@@ -123,7 +123,7 @@ async function connect() {
         await caller.block()
     })
     
-    conn.on("change_state", async (state) => console.log(state))
+    // conn.on("change_state", async (state) => console.log(state))
     conn.on("group_join", async (call) => console.log(call))
     conn.on("group_leave", async (call) => console.log(call))
     conn.on("message_revoke_everyone", async (revokedMessage, m) => {  

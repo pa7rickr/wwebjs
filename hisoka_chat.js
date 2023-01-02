@@ -218,7 +218,6 @@ exports.start = async (conn, m) => {
             if (sortedPlayers[i].votes === votes) tie = true
           }
           let votedPlayer = sortedPlayers[0];
-          console.log(votedPlayer)
           return votedPlayer;
         }
         

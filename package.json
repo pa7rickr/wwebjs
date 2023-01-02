@@ -1,7 +1,7 @@
 {
-  "name": "hisoka-waweb.js",
+  "name": "wwebjs",
   "version": "1.0.0",
-  "description": "Script Bot WhatsApp Multi Device Using Library whatsapp-web.js",
+  "description": "Simple WhatsApp Bot with  whatsapp-web.js",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -51,6 +51,6 @@
     "whatsapp-web.js": "github:pedroslopez/whatsapp-web.js",
     "wwebjs-mongo": "^1.1.0",
     "xfarr-api": "^1.0.3",
-    "yargs": "^17.6.2",
+    "yargs": "^17.6.2"
   }
 }

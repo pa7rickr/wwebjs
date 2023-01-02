@@ -56,10 +56,10 @@ this.game = {
 let game = this.game
 
 /**** API Module ****/
-const bochil = require('@bochilteam/scraper')
-const yts = require('yt-search')
-const hxz = require('hxz-api')
-const xa = require('xfarr-api')
+let bochil = require('@bochilteam/scraper')
+let yts = '' 
+let hxz = require('hxz-api')
+let xa = require('xfarr-api')
 
 exports.reaction = async (message, conn) => { 
 	try { 

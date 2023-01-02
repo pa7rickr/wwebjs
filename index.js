@@ -21,7 +21,7 @@ try {
     require.resolve("yt-search")
 } catch(e) {
     console.log(`plugin "yt-search" is not found. Trying to installing...`)
-    exec('npm i -g yt-search && npm list', (err, stdout) => { return console.log(err, stdout) })
+    exec('npm i yt-search && npm list', (err, stdout) => { return console.log(err, stdout) })
     
 }
 

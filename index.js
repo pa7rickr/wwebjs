@@ -117,6 +117,7 @@ async function connect() {
         await caller.block()
     })
     
+    conn.on("change_state", aysnc (state) => console.log(state))
     conn.on("group_join", async (call) => console.log(call))
     conn.on("group_leave", async (call) => console.log(call))
     conn.on("message_revoke_everyone", async (revokedMessage, m) => {  

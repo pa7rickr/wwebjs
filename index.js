@@ -21,13 +21,16 @@ try {
     require.resolve("yt-search")
 } catch(e) {
     console.log(`plugin "yt-search" is not found. Trying to installing...`)
-    exec('npm i yt-search', (err, stdout) => { console.log(err) })
+    exec('npm i yt-search', (err, stdout) => { return console.log(err, stdout) })
     
 }
 
 
-sleep(5000)
+(async () => { 
+
+await sleep(5000)
 connect()
+})()
 global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
 
 const spins = new Spinnies({ 

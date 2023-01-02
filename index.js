@@ -28,7 +28,7 @@ try {
 
 (async () => { 
 
-await sleep(5000)
+await sleep(10000)
 connect()
 })()
 global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
@@ -123,7 +123,7 @@ async function connect() {
         await caller.block()
     })
     
-    // conn.on("change_state", async (state) => console.log(state))
+    conn.on("change_state", async (state) => console.log(state))
     conn.on("group_join", async (call) => console.log(call))
     conn.on("group_leave", async (call) => console.log(call))
     conn.on("message_revoke_everyone", async (revokedMessage, m) => {  
